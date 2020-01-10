@@ -1,0 +1,26 @@
+query DailyTransactionsFeed {
+  dailyTransactionsFeed {
+    ... on DaySectionWidget {
+      date
+      amount {
+        value
+        currencyCode
+      }
+    }
+    ... on TransactionWidget {
+      transaction {
+        id
+        title
+        type
+        amount {
+          value
+          currencyCode
+        }
+      }
+      image {
+        iconName
+        url
+      }
+    }
+  }
+}
